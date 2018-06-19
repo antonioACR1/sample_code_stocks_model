@@ -1,0 +1,8 @@
+
+hdfs dfs -put /home/cloudera/Downloads/stocks_model/extractionTweepy/data/tweetsVolaris.csv /user/cloudera/tweetsVolaris.csv
+
+spark-shell --packages com.databricks:spark-csv_2.10:1.5.0
+
+val sqlContext=new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df=sqlContext.read.format("com.databricks.spark.csv").option("header","true").option("delimiter",",").option("inferSchema","true").load("/user/cloudera/tweetsVolaris.csv")

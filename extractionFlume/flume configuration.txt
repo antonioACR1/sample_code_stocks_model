@@ -1,0 +1,24 @@
+TwitterAgent.sources = Twitter
+TwitterAgent.channels = MemChannel
+TwitterAgent.sinks = HDFS
+
+TwitterAgent.sources.Twitter.type = org.apache.flume.source.twitter.TwitterSource
+TwitterAgent.sources.Twitter.channels = MemChannel
+TwitterAgent.sources.Twitter.consumerKey = ScvEvhT6tUK7kiVuD3HohF82A
+TwitterAgent.sources.Twitter.consumerSecret = ILu2l3M7ybq6bfGono0C4xOyh9KOelpCqFxbrEwIwiF7JlPk7V
+TwitterAgent.sources.Twitter.accessToken = 877848902-yzXJ9nMkrt6iDPIuc62s4Pum2KTSIbDKnHqExZPE
+TwitterAgent.sources.Twitter.accessTokenSecret = 3cxI5ZXotgR72nS5cB3rwSC9P3tbWcbiLZjpQz5CiYcJb 
+TwitterAgent.sources.Twitter.keywords = toyota, mexico
+
+TwitterAgent.sinks.HDFS.channel = MemChannel
+TwitterAgent.sinks.HDFS.type = hdfs
+TwitterAgent.sinks.HDFS.hdfs.path = hdfs://quickstart.cloudera:8020/user/cloudera
+TwitterAgent.sinks.HDFS.hdfs.fileType = DataStream
+TwitterAgent.sinks.HDFS.hdfs.writeFormat = Text
+TwitterAgent.sinks.HDFS.hdfs.batchSize = 1000
+TwitterAgent.sinks.HDFS.hdfs.rollSize = 0
+TwitterAgent.sinks.HDFS.hdfs.rollCount = 10000
+
+TwitterAgent.channels.MemChannel.type = memory
+TwitterAgent.channels.MemChannel.capacity = 10000
+TwitterAgent.channels.MemChannel.transactionCapacity = 100

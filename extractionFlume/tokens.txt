@@ -1,0 +1,9 @@
+ScvEvhT6tUK7kiVuD3HohF82A 
+
+
+
+ Consumer Key (API Key) ScvEvhT6tUK7kiVuD3HohF82A
+Consumer Secret (API Secret) ILu2l3M7ybq6bfGono0C4xOyh9KOelpCqFxbrEwIwiF7JlPk7V
+Access Level Read and write (modify app permissions)
+Owner ACRpostpunk
+Owner ID 877848902 
